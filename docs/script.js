@@ -57,7 +57,7 @@ function UpsertNoteToListOnUi(newNote) {
         window.history.pushState({noteId}, "", `/${newNote.id}`);
     };
     const noteTitle = document.createElement("h3");
-    noteTitle.innerHTML = newNote.title;s
+    noteTitle.innerHTML = newNote.title;
     const noteDate = document.createElement("span");
     noteDate.innerHTML = newNote.date;
     div.prepend(noteTitle, noteDate);
