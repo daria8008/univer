@@ -50,7 +50,7 @@ function UpsertNoteToListOnUi(newNote) {
         _selectedNoteId = noteId;
         HighlightSelectedNoteOnUi(noteId);
         for (var n in date){
-            document.getElementById(NoteSpaceTagId).value = _data[noteId].text[var];
+            document.getElementById(NoteSpaceTagId).value = _data[noteId].text[n];
         }
         //document.getElementById(NoteSpaceTagId).value = _data[noteId].text;
         window.history.pushState({noteId}, "", `/${newNote.id}`);

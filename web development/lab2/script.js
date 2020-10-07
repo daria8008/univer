@@ -49,7 +49,10 @@ function UpsertNoteToListOnUi(newNote) {
         const noteId = event.target.id || event.target.parentNode.id;
         _selectedNoteId = noteId;
         HighlightSelectedNoteOnUi(noteId);
-        document.getElementById(NoteSpaceTagId).value = _data[noteId].text;
+        for (var n in date){
+            document.getElementById(NoteSpaceTagId).value = _data[noteId].text[n];
+        }
+        //document.getElementById(NoteSpaceTagId).value = _data[noteId].text;        
         window.history.pushState({noteId}, "", `/${newNote.id}`);
     };
     const noteTitle = document.createElement("h3");
