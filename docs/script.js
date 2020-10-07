@@ -50,7 +50,7 @@ function UpsertNoteToListOnUi(newNote) {
         _selectedNoteId = noteId;
         HighlightSelectedNoteOnUi(noteId);
         document.getElementById(NoteSpaceTagId).value = _data[noteId].text;
-        window.history.pushState({noteId}, "", (window.location.pathname + newNote.id));
+        window.history.pushState({noteId}, "", `/${newNote.id}`);
     };
     const noteTitle = document.createElement("h3");
     noteTitle.innerHTML = newNote.title;
@@ -70,6 +70,7 @@ function DeleteCurrNote() {
 
     // reset selected note
     _selectedNoteId = null;
+    AddNewNote();
 }
 
 function HighlightSelectedNoteOnUi(noteId) {
