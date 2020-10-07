@@ -16,10 +16,10 @@ function CreateGuid() {
 
 function SaveCurrNote(){  
     const noteToSaveId = _selectedNoteId ? _selectedNoteId : (NoteIdPrefix + CreateGuid());
-    const noteToSaveData = document.getElementById(NoteSpaceTagId).value.split("\n"); 
+    const noteToSaveData = document.getElementById(NoteSpaceTagId).value; 
     const noteToSave = {
         id: noteToSaveId,
-        title: noteToSaveData[0],
+        title: noteToSaveData.split("\n")[0],
         date: new Date().toDateString(),
         text: noteToSaveData
     }; 
