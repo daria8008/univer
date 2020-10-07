@@ -49,11 +49,7 @@ function UpsertNoteToListOnUi(newNote) {
         const noteId = event.target.id || event.target.parentNode.id;
         _selectedNoteId = noteId;
         HighlightSelectedNoteOnUi(noteId);
-        let temp = _data[noteId].text
-        for (var index in temp){
-            document.getElementById(NoteSpaceTagId).value = temp[index];
-        }
-        //document.getElementById(NoteSpaceTagId).value = _data[noteId].text;
+        document.getElementById(NoteSpaceTagId).value = _data[noteId].text;
         window.history.pushState({noteId}, "", `/${newNote.id}`);
     };
     const noteTitle = document.createElement("h3");
