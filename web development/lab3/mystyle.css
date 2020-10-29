@@ -1,0 +1,151 @@
+.headerbox{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color:rgb(240, 226, 245);
+}
+body{
+    
+    position: relative;
+    background-color: rgb(253, 250, 253);
+    position: relative;
+}
+#logo{
+    width:75px; 
+    height:70px;
+    margin:0; 
+    padding:0;
+    border-radius: 40px;
+    background-image:url('logo.jpg');
+}
+.icon{
+    width:40px; 
+    height:40px; 
+    margin-top:10px; 
+    padding:0;
+    border: 2px outset grey;
+    font-family: "Lucida Console", Courier, monospace;
+}
+.favourites{
+    position:absolute; 
+    right:90px;
+}
+.basket{
+    position:absolute; 
+    right:30px;
+}
+.button{
+    width:70px;
+    height:25px;
+    text-align: center;
+    margin:10px;
+    border: 2px outset grey;
+    background-color: rgb(255, 250, 255);
+}
+.button:hover{
+    background-color: #662f66;
+    color: white;
+}
+.help{
+    position:absolute; 
+    right:350px;
+}
+.contacts{
+    position:absolute; 
+    right:270px;
+}
+input[type=text] {
+    width: 10%;
+    height: 0.3%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.jpg');
+    background-position: 10px 5px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 30px;
+    position:absolute; 
+    right:150px;
+    margin-top:10px;
+}
+.catalog-box{
+    position: sticky;
+    top: 0;
+    float:left;
+    width:200px;
+    height:300px;
+}
+.menu{
+    background-image:url('menu.jpg');
+    width:35px; 
+    height:35px; 
+    margin: 5px;
+}
+.catalog{
+    width: 70px;
+    height: 25px;
+    margin-left: 10px;
+    font-family: "Lucida Console", Courier, monospace;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.1s;
+}
+.catalog:hover{
+    width: 200px;
+    height: 190px;
+    background: rgb(219, 210, 221);
+}
+.content-box{
+    float:left;
+    text-decoration-color: rgb(85, 0, 141);
+}
+.grid-box{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 40px;
+    margin-left: 10px;
+    width:100%;
+}
+@media screen and (max-width: 992px) {
+    .grid-box {
+        grid-template-columns: auto auto;
+        width: 50%;
+        padding: 20px;
+        margin-left: 10px;
+    }
+
+}
+@media screen and (max-width: 600px){
+    .button{
+        width:50px;
+        height: 17px;
+        text-overflow: ellipsis;
+        overflow: hidden; 
+    }
+    .grid-box {
+        grid-template-columns: auto;
+        width: 50%;
+        padding: 20px;
+        margin-left: 10px;
+    }
+}
+.right-box{
+    float:right;
+    width:5%;
+    height: 80%;
+    margin:10px;
+}
+.caption{
+    font-family: "Lucida Console", Courier, monospace;
+}
+.call{
+    position:fixed;
+    animation: mymove 3s infinite;
+}
+@keyframes mymove {
+    from {top: 100px;}
+    to {top: 113px;}
+}
