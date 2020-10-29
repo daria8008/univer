@@ -2,104 +2,106 @@
 <html>
 
 <head>
-    <script type="text/javascript" src="./script.js"></script>
-</head>
-
-<style>
-    body{
-        background-color:rgb(107, 107, 107);
-    }
-    #leftbox { 
-        float:left;  
-        background:rgba(5, 5, 5, 0.534); 
-        height:500px; 
-        width:25%;
-        border-style: groove;
-        display: block;
-        overflow-x: hidden; 
-        overflow-y: auto;
-    } 
-    #rightebox{ 
-        float:right;  
-        background:rgb(230, 213, 213); 
-        height:900px;
-        width:280px; 
-        margin-top: 100px;
-        margin-bottom: 100px;
-        margin-right: 150px;
-        margin-left: 80px;
-    } 
-    #noteSpace{
-        height:450px;
-        width:70%;  
-    }
-    .button{
-        background-color: rgb(224, 219, 219);
-        padding: 10px 125px;
-        text-align: center;
-        font-size: 15px;
-    }
-    .button1{
-        margin-top: 10px ;
-        margin-left: 27px;
-        border-radius: 8px;
-        transition-duration: 0.4s;
-        color: black;
-        border: 2px solid #555555;
-        display: block
-    }
-    .button2{
-        margin-left: 280px;
-        border-radius: 8px;
-        transition-duration: 0.4s;
-        color: black;
-        border: 2px solid #555555;
-    }
-    .button3{
-        margin-left: 10px;
-        border-radius: 8px;
-        transition-duration: 0.4s;
-        color: black;
-        border: 2px solid #555555;
-    }
-    .button:hover{
-        background-color: #555555;
-        color: white;
-    }
-    .notes{
-        margin-top: 10px;
-        margin-left: 13px;
-        border: 3px outset grey;
-        background-color: white;    
-        text-align: center;
-        border-radius: 16px;
-        line-height: 20%;
-        width: 280px;
-        height: 55px;
-        text-overflow: ellipsis;
-        overflow: hidden; 
-        white-space: nowrap;
-    }
-    .notes.selected{
-        background-color: yellow;
-    }
-</style>
-
-<body>
-    <div id = "leftbox">
-        <div id="notes-list">
-        </div>
-        <button class="button button1" id="newNoteBtn" type="button" onclick="AddNewNote();">+</button>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="icon" type="image/png" href="C:/Users/Ryzen/Desktop/page/logo.jpg"/>
+    <div class = "headerbox">
+        <div id = "logo"></div>
+        <div class = "button help">Help</div>
+        <div class = "button contacts">Contacts</div>
+        <input type="text" name="search" placeholder="Search..">
+        <div class = "icon favourites"><img src="favourites.jpg" alt="" /></div>
+        <div class = "icon basket"><img src="basket.jpg" alt="" /></div>
     </div>
-    
-    
-    <div id = "rightbox">
-        <textarea id="noteSpace" name="note" rows="5" cols="33"></textarea>
-        
-        <button class="button button2" id ="deleteNote" name="del" onclick="DeleteCurrNote()">Delete</button>
-        <button class="button button3" id ="saveNote" name="saving" onclick="SaveCurrNote()"> Save </button>
+</head>
+<body>
+
+    <div class = "catalog-box">
+        <div class = "menu"><img src="menu.jpg" alt="" /></div>
+        <div class = "catalog men">
+            <span>Men</span><br>
+            <ul>
+                <li><span>Hot Sale</span><br></li>
+                <li><span>Hoodies</span><br></li>
+                <li><span>Outerwear & Jackets</span><br></li>
+                <li><span>T-Shirts</span><br></li>
+                <li><span>Shirts</span><br></li>
+                <li><span>Jeans</span><br></li>
+                <li><span>Shorts</span><br></li>
+                <li><span>Accessories</span><br></li>
+            </ul>
+        </div>
+        <div class = "catalog women">
+            <span>Women</span><br>
+            <ul>
+                <li><span>Hot Sale</span><br></li>
+                <li><span>Hoodies</span><br></li>
+                <li><span>Outerwear & Jackets</span><br></li>
+                <li><span>T-Shirts</span><br></li>
+                <li><span>Shirts</span><br></li>
+                <li><span>Jeans</span><br></li>
+                <li><span>Dresses</span><br></li>
+                <li><span>Accessories</span><br></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class = "right-box">
+        <div class = "call"><img src="call.jpg" alt="" /></div>
+     </div>
+
+    <div class = "content-box">
+        <h2>Hits of sales</h2>
+        <div class = "grid-box">
+            <div class="item">
+                <img src="thing1.jpg" alt="" />
+                <div class = "caption">
+                    <nav>
+                        <a href="https://www.bershka.com/id/women/collection/sweatshirts-and-hoodies/cropped-sweatshirt-c1010193222p102454204.html?colorId=800">Cropped sweatshirt</a></nav><br>
+                    <span>30$</span>
+                </div>
+            </div>
+            <div class="item">
+                <img src="thing2.jpg" alt="" />
+                <div class = "caption">
+                    <nav>
+                        <a href="https://www.bershka.com/id/women/collection/t-shirts-and-tops/bodysuit-with-rhinestone-chains-c1010193217p102635076.html?colorId=800">Long sleeve bodysuit</a></nav><br>
+                    <span>20$</span>
+                </div>
+            </div>
+            <div class="item">
+                <img src="thing3.jpg" alt="" />
+                <div class = "caption">
+                    <nav>
+                        <a href="https://www.bershka.com/id/women/collection/jackets-and-coats/faux-shearling-trucker-jacket-c1010193212p102537667.html?colorId=800">Faux jacket</a></nav><br>
+                    <span>27$</span>
+                </div>
+            </div>  
+            <div class="item">
+                <img src="thing4.jpg" alt="" />
+                <div class = "caption">
+                    <nav>
+                        <a href="https://www.bershka.com/id/men/collection/jeans/wide-leg-jeans-c1010193238p102540510.html?colorId=400">Wide-leg jeans</a></nav><br>
+                    <span>25$</span>
+                </div>
+            </div>
+            <div class="item">
+                <img src="thing5.jpg" alt="" />
+                <div class = "caption">
+                    <nav>
+                        <a href="https://www.bershka.com/id/men/collection/jackets-and-coats/denim-jacket-with-faux-shearling-c1010193546p102540660.html?colorId=818">Denim jacket shearling</a></nav><br>
+                    <span>30$</span>
+                </div>
+            </div>
+            <div class="item">
+                <img src="thing6.jpg" alt="" />
+                <div class = "caption">
+                    <nav>
+                        <a href="https://www.bershka.com/id/men/collection/shirts/long-sleeve-checked-shirt-c1010193240p102500022.html?colorId=600">Check shirt</a></nav><br>
+                    <span>23$</span>
+                </div>
+            </div>  
+        </div>
     </div>
 </body>
 
 </html>
-
