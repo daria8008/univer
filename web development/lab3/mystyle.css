@@ -109,22 +109,15 @@ input[type=text] {
     margin-left: 10px;
     width:100%;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 993px) {
     .grid-box {
         grid-template-columns: auto auto;
         width: 50%;
         padding: 20px;
         margin-left: 10px;
     }
-
 }
 @media screen and (max-width: 600px){
-    .button{
-        width:50px;
-        height: 17px;
-        text-overflow: ellipsis;
-        overflow: hidden; 
-    }
     .grid-box {
         grid-template-columns: auto;
         width: 50%;
